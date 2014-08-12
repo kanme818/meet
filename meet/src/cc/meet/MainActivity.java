@@ -1,4 +1,4 @@
-package cc.meet.www;
+package cc.meet;
 
 import android.app.ActionBar;
 import android.app.Activity;
