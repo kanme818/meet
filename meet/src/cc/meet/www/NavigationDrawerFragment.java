@@ -1,4 +1,4 @@
-package com.meet.cn;
+package cc.meet.www;
 
 
 import android.app.Activity;
