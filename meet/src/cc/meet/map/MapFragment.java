@@ -1,4 +1,4 @@
-package cc.meet.activity;
+package cc.meet.map;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -24,17 +24,17 @@ public class MapFragment extends BaseFragment {
 		SDKInitializer.initialize(parentActivity.getApplicationContext());
 		View rootView = inflater.inflate(R.layout.fragment_map_main, container,
 				false);
-		// »ñÈ¡µØÍ¼¿Ø¼şÒıÓÃ
+		// ï¿½ï¿½È¡ï¿½ï¿½Í¼ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½
 		mMapView = (MapView) rootView.findViewById(R.id.bmapView);
 
 		LatLng cenpt = new LatLng(30.663791, 104.07281);
-		// ¶¨ÒåµØÍ¼×´Ì¬
+		// ï¿½ï¿½ï¿½ï¿½ï¿½Í¼×´Ì¬
 		MapStatus mMapStatus = new MapStatus.Builder().target(cenpt).zoom(12)
 				.build();
 
 		MapStatusUpdate mMapStatusUpdate = MapStatusUpdateFactory
 				.newMapStatus(mMapStatus);
-		// ¸Ä±äµØÍ¼×´Ì¬
+		// ï¿½Ä±ï¿½ï¿½Í¼×´Ì¬
 		mMapView.getMap().setMapStatus(mMapStatusUpdate);
 		return rootView;
 	}
@@ -47,21 +47,21 @@ public class MapFragment extends BaseFragment {
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
-		// ÔÚactivityÖ´ĞĞonDestroyÊ±Ö´ĞĞmMapView.onDestroy()£¬ÊµÏÖµØÍ¼ÉúÃüÖÜÆÚ¹ÜÀí
+		// ï¿½ï¿½activityÖ´ï¿½ï¿½onDestroyÊ±Ö´ï¿½ï¿½mMapView.onDestroy()ï¿½ï¿½Êµï¿½Öµï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½
 		mMapView.onDestroy();
 	}
 
 	@Override
 	public void onResume() {
 		super.onResume();
-		// ÔÚactivityÖ´ĞĞonResumeÊ±Ö´ĞĞmMapView. onResume ()£¬ÊµÏÖµØÍ¼ÉúÃüÖÜÆÚ¹ÜÀí
+		// ï¿½ï¿½activityÖ´ï¿½ï¿½onResumeÊ±Ö´ï¿½ï¿½mMapView. onResume ()ï¿½ï¿½Êµï¿½Öµï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½
 		mMapView.onResume();
 	}
 
 	@Override
 	public void onPause() {
 		super.onPause();
-		// ÔÚactivityÖ´ĞĞonPauseÊ±Ö´ĞĞmMapView. onPause ()£¬ÊµÏÖµØÍ¼ÉúÃüÖÜÆÚ¹ÜÀí
+		// ï¿½ï¿½activityÖ´ï¿½ï¿½onPauseÊ±Ö´ï¿½ï¿½mMapView. onPause ()ï¿½ï¿½Êµï¿½Öµï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½
 		mMapView.onPause();
 	}
 }

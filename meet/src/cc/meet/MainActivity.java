@@ -11,7 +11,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import cc.meet.activity.MapFragment;
+import cc.meet.map.MapFragment;
+import cc.meet.system.AppConstant;
+
+import com.baidu.android.pushservice.PushConstants;
+import com.baidu.android.pushservice.PushManager;
 
 public class MainActivity extends Activity implements
 		NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -40,6 +44,9 @@ public class MainActivity extends Activity implements
 		// Set up the drawer.
 		mNavigationDrawerFragment.setUp(R.id.navigation_drawer,
 				(DrawerLayout) findViewById(R.id.drawer_layout));
+
+		PushManager.startWork(MainActivity.this,
+				PushConstants.LOGIN_TYPE_API_KEY, AppConstant.BAIDUPUSH_APIKEY);
 	}
 
 	@Override
